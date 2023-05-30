@@ -1,42 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import axios from 'axios';
+import plantsData from '../plants.json';
 
 const SinglePlant = () => {
   const [plantDetails, setPlantDetails] = useState([]);
-  const [sowingInside, setSowingInside] = useState([]);
-  const [sowingOutside, setSowingOutside] = useState([]);
-  const [plantsFriends, setPlantsFriends] = useState([]);
-  const [plantsEnnemies, setPlantsEnnemies] = useState([]);
   const { id } = useParams();
-  const url = `${import.meta.env.VITE_URL}/plants/`;
+  console.log(id);
 
   const getSinglePlant = async () => {
     try {
-      const {
-        data: {
-          plant: plant,
-          sowing_inside: sowing_inside,
-          sowing_outside: sowing_outside,
-          plants_friends: plants_friends_name,
-          plants_ennemies: plants_ennemies_name,
-        },
-      } = await axios.get(`${url}${id}`);
+      const plant = plantsData.filter((plant) => (plant.plant_id = id));
       setPlantDetails(plant);
-      if (sowing_inside) {
-        setSowingInside(sowing_inside);
-      }
-
-      if (sowing_outside) {
-        setSowingOutside(sowing_outside);
-      }
-
-      if (plants_friends_name) {
-        setPlantsFriends(plants_friends_name);
-      }
-      if (plants_ennemies_name) {
-        setPlantsEnnemies(plants_ennemies_name);
-      }
     } catch (error) {
       console.log(error);
     }
@@ -61,13 +35,6 @@ const SinglePlant = () => {
     rows_spacing_in_cm,
     plants_spacing_in_cm,
   } = plantDetails;
-
-  const { sowing_date_start_inside, sowing_date_end_inside } = sowingInside;
-  const { sowing_date_start_outside, sowing_date_end_outside } = sowingOutside;
-
-  const { plants_friends_name } = plantsFriends;
-
-  const { plants_ennemies_name } = plantsEnnemies;
 
   return (
     <>
@@ -96,7 +63,7 @@ const SinglePlant = () => {
 
         <div className='plantsDetails'>
           <div className='semisDetails'>
-            {sowing_date_start_inside && (
+            {/* {sowing_date_start_inside && (
               <>
                 <h3> Semis sous abri</h3>
                 <p>
@@ -117,7 +84,7 @@ const SinglePlant = () => {
               </>
             )}
 
-            <p>{sowing_details}</p>
+            <p>{sowing_details}</p> */}
           </div>
           <div className='plantationDetails'>
             <h3>Plantation</h3>
@@ -167,7 +134,7 @@ const SinglePlant = () => {
             )}
           </div>
 
-          {(plants_friends_name || plants_ennemies_name) && (
+          {/* {(plants_friends_name || plants_ennemies_name) && (
             <div className='cohabPlants'>
               <h3>Cohabitation</h3>
               {plants_friends_name && (
@@ -180,7 +147,7 @@ const SinglePlant = () => {
                 </>
               )}
             </div>
-          )}
+          )} */}
         </div>
       </section>
     </>

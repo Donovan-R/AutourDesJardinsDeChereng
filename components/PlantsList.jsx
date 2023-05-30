@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
+import plantsData from '../plants.json';
+
+console.log(plantsData.map((plant) => plant.name));
 
 const PlantsList = ({ plant }) => {
+  console.log(plant);
   const {
     plant_id,
     name,
@@ -24,9 +28,14 @@ const PlantsList = ({ plant }) => {
           <b>Récolte</b> à partir du : {harvest_date_start}
         </h4>
         <div className='detailsBtnContainer'>
-          <Link to={`/plantations/${plant_id}`}>
-            <button className='detailsBtn'>détails</button>
-          </Link>
+          {/* <Link to={`/plantations/${plant_id}`}> */}
+          <button
+            className='detailsBtn'
+            onClick={() => console.log({ plant_id })}
+          >
+            détails
+          </button>
+          {/* </Link> */}
         </div>
       </div>
     </article>

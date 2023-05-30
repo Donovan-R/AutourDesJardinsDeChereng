@@ -15,7 +15,7 @@ const Home = () => {
             Bienvenue sur le site de l'association Autour Des Jardins De
             Chéreng.
           </h3>
-          <p className='introuceText'>
+          <p className='introduceText'>
             Ce site vous permettra de mieux connaître l'association et ses
             activités. Il vous offira également la possibilité de vous incrire
             sur notre liste d'attente grâce au formulaire visible sur la page{' '}

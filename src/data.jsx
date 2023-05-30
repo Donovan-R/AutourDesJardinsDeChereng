@@ -18,12 +18,7 @@ export const linksPublic = [
   {
     id: 4,
     url: '/contact',
-    text: 'Nous rejoindre',
-  },
-  {
-    id: 5,
-    url: '/login',
-    text: 'mon jardin',
+    text: 'Nous contacter',
   },
 ];
 export const linksPrivate = [

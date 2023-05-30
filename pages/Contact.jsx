@@ -26,22 +26,18 @@ const Contact = ({ alert, showAlert, setToken }) => {
         </span>
 
         <div className='underlineContact'></div>
-        <h4>
-          Prêt à cultiver votre jardin? Remplissez le formulaire ci-dessous pour
-          vous inscrire dans notre liste d'attente. Nous vous recontacterons
-          pour savoir si vous êtes toujours intéressé, le moment venu.
-        </h4>
+        <h4>Prêt à cultiver votre jardin? N'hésitez pas à nous contacter</h4>
         <p>
           Avant tout, consultez le règlement intérieur de l'association{' '}
           <a href={reglement} target='blank'>
             ici
           </a>{' '}
-          (vous devrez l'accepter pour finaliser votre inscription)
+          (vous devrez l'accepter pour vous inscrire)
         </p>
       </div>
-      <div className='formEntire'>
+      {/* <div className='formEntire'>
         <Form alert={alert} showAlert={showAlert} setToken={setToken} />
-      </div>
+      </div> */}
 
       <Link to='/'>
         <span className='backHome'>

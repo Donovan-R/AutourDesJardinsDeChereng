@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { GiBirdHouse } from 'react-icons/gi';
 import Loading from '../components/Loading';
-import axios from 'axios';
+import plantsData from '../plants.json';
 import PlantsList from '../components/PlantsList';
 import Goup from '../components/Goup';
 
 const Plantations = () => {
-  const url = `${import.meta.env.VITE_URL}/plants/`;
   const [plantationsTab, setPlantationsTab] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState('');
@@ -16,8 +15,7 @@ const Plantations = () => {
   const getAllPlants = async () => {
     setIsLoading(true);
     try {
-      const { data } = await axios.get(url);
-      setPlantationsTab(data.plants);
+      setPlantationsTab(plantsData);
       setIsLoading(false);
     } catch (error) {
       console.log(error.response);
@@ -54,12 +52,13 @@ const Plantations = () => {
       </div>
       <div className='plantsTab'>
         {filterPlantTab.length >= 1 ? (
-          filterPlantTab.map((plant) => (
-            <PlantsList plant={plant} key={plant.plant_id} />
+          filterPlantTab.map((plant, index) => (
+            <PlantsList plant={plant} key={index} />
           ))
         ) : (
           <h2>pas de résultat</h2>
         )}
+        {console.log(filterPlantTab)}
       </div>
 
       <Link to='/'>
