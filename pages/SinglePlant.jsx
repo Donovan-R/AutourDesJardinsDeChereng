@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import plantsData from '../plants.json';
 
-const SinglePlant = () => {
+const SinglePlant = ({ plantId }) => {
   const [plantDetails, setPlantDetails] = useState([]);
-  const { id } = useParams();
-  console.log(id);
+  // const { id } = useParams();
+  console.log(plantId);
 
   const getSinglePlant = async () => {
     try {
-      const plant = plantsData.filter((plant) => (plant.plant_id = id));
+      const plant = plantsData.filter((plant) => (plant.plant_id = plantId));
       setPlantDetails(plant);
     } catch (error) {
       console.log(error);

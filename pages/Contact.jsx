@@ -7,7 +7,7 @@ import { GiBirdHouse } from 'react-icons/gi';
 import { GoMail, GoHome } from 'react-icons/go';
 import { SiHomeassistant } from 'react-icons/si';
 
-const Contact = ({ alert, showAlert, setToken }) => {
+const Contact = () => {
   return (
     <section className='contactSection'>
       <div className='contactTitle'>

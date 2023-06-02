@@ -58,7 +58,6 @@ const Plantations = () => {
         ) : (
           <h2>pas de résultat</h2>
         )}
-        {console.log(filterPlantTab)}
       </div>
 
       <Link to='/'>
