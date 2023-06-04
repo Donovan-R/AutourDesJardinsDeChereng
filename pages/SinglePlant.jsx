@@ -2,15 +2,52 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import plantsData from '../plants.json';
 
-const SinglePlant = ({ plantId }) => {
-  const [plantDetails, setPlantDetails] = useState([]);
-  // const { id } = useParams();
-  console.log(plantId);
 
+
+const SinglePlant = () => {
+ 
+  
+  const [plantDetails, setPlantDetails] = useState({
+    plant_name :'',
+    main_img :'',
+    img_inter :'',
+    img_plant :'',
+    harvest_date_start :'',
+    harvest_date_end :'',
+    plantation_date_start :'',
+    plantation_date_end :'',
+    plantation_details :'',
+    sowing_details :'',
+    crop :'',
+    crop_rotation :'',
+    rows_spacing_in_cm :'',
+    plants_spacing_in_cm :'',
+  });
+  // console.log(window.location.pathname.charAt(13))
+// const plantId = Number(window.location.pathname.charAt(13))
+const plantId = Number(useParams().id)
   const getSinglePlant = async () => {
     try {
-      const plant = plantsData.filter((plant) => (plant.plant_id = plantId));
-      setPlantDetails(plant);
+      
+      const plant = plantsData.filter((plant) => (plant.plant_id === plantId));
+     console.log(plant)
+      setPlantDetails({
+        plant_name : plant[0].name,
+        main_img :plant[0].main_img,
+        img_inter :plant[0].img_inter,
+        img_plant :plant[0].img_plant,
+        harvest_date_start :plant[0].harvest_date_start,
+        harvest_date_end :plant[0].harvest_date_end,
+        plantation_date_start :plant[0].plantation_date_start,
+        plantation_date_end :plant[0].plantation_date_end,
+        plantation_details :plant[0].plantation_details,
+        sowing_details :plant[0].sowing_details,
+        crop :plant[0].crop,
+        crop_rotation :plant[0].crop_rotation,
+        rows_spacing_in_cm :plant[0].rows_spacing_in_cm,
+        plants_spacing_in_cm :plant[0].rows_spacing_in_cm,
+      });
+      console.log(plantDetails);
     } catch (error) {
       console.log(error);
     }
@@ -18,7 +55,7 @@ const SinglePlant = ({ plantId }) => {
 
   useEffect(() => {
     getSinglePlant();
-  }, []);
+  }, [plantId]);
   const {
     plant_name,
     main_img,

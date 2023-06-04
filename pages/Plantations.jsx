@@ -52,8 +52,8 @@ const Plantations = () => {
       </div>
       <div className='plantsTab'>
         {filterPlantTab.length >= 1 ? (
-          filterPlantTab.map((plant, index) => (
-            <PlantsList plant={plant} key={index} />
+          filterPlantTab.map((plant) => (
+            <PlantsList plant={plant} key={plant.plant_id} />
           ))
         ) : (
           <h2>pas de résultat</h2>
