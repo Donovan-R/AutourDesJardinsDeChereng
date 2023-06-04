@@ -22,6 +22,12 @@ const SinglePlant = () => {
     crop_rotation :'',
     rows_spacing_in_cm :'',
     plants_spacing_in_cm :'',
+    sowing_date_start_inside: '',
+    sowing_date_end_inside: '',
+    sowing_date_start_outside: '',
+    sowing_date_end_outside: '',
+    plant_friends: '',
+    plant_ennemies: ''
   });
   // console.log(window.location.pathname.charAt(13))
 // const plantId = Number(window.location.pathname.charAt(13))
@@ -46,6 +52,12 @@ const plantId = Number(useParams().id)
         crop_rotation :plant[0].crop_rotation,
         rows_spacing_in_cm :plant[0].rows_spacing_in_cm,
         plants_spacing_in_cm :plant[0].rows_spacing_in_cm,
+        sowing_date_start_inside: plant[0].sowing_date_start_inside,
+        sowing_date_end_inside: plant[0].sowing_date_end_inside,
+        sowing_date_start_outside: plant[0].sowing_date_start_outside,
+        sowing_date_end_outside: plant[0].sowing_date_end_outside,
+        plant_friends: plant[0].plant_friends,
+        plant_ennemies: plant[0].plant_ennemies
       });
       console.log(plantDetails);
     } catch (error) {
@@ -71,6 +83,12 @@ const plantId = Number(useParams().id)
     crop_rotation,
     rows_spacing_in_cm,
     plants_spacing_in_cm,
+    sowing_date_start_inside,
+    sowing_date_end_inside,
+    sowing_date_start_outside,
+    sowing_date_end_outside,
+    plant_friends,
+    plant_ennemies
   } = plantDetails;
 
   return (
@@ -100,7 +118,7 @@ const plantId = Number(useParams().id)
 
         <div className='plantsDetails'>
           <div className='semisDetails'>
-            {/* {sowing_date_start_inside && (
+            {sowing_date_start_inside && (
               <>
                 <h3> Semis sous abri</h3>
                 <p>
@@ -115,13 +133,13 @@ const plantId = Number(useParams().id)
               <>
                 <h3> Semis en pleine terre</h3>
                 <p>
-                  Les semis se font en pleine terre du
+                  Les semis se font en pleine terre du {' '}
                   {sowing_date_start_outside} au {sowing_date_end_outside}
                 </p>
               </>
             )}
 
-            <p>{sowing_details}</p> */}
+            <p>{sowing_details}</p>
           </div>
           <div className='plantationDetails'>
             <h3>Plantation</h3>
@@ -171,20 +189,23 @@ const plantId = Number(useParams().id)
             )}
           </div>
 
-          {/* {(plants_friends_name || plants_ennemies_name) && (
+          {(plant_friends || plant_ennemies) && (
             <div className='cohabPlants'>
               <h3>Cohabitation</h3>
-              {plants_friends_name && (
-                <h4>Ce plant pourra cohabiter avec : {plants_friends_name}</h4>
+              {plant_friends && (
+                <>
+                  <h4>Ce plant pourra cohabiter avec :</h4>
+                  <p> {plant_friends}</p>
+                </>
               )}
-              {plants_ennemies_name && (
+              {plant_ennemies && (
                 <>
                   <h4>A contrario, il vaudra mieux éviter de l'associer à :</h4>
-                  <p>{plants_ennemies_name}</p>
+                  <p> {plant_ennemies}</p>
                 </>
               )}
             </div>
-          )} */}
+          )}
         </div>
       </section>
     </>

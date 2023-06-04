@@ -14,7 +14,13 @@
     "crop": "Coupez la tête du plant lorsqu'il a formé 2 ou 3 bouquets de fleurs car cela permet de créer des ramification. Comme pour les pieds de tomates, coupez les gourmands.",
     "crop_rotation": "3 ou 4 ans.",
     "rows_spacing_in_cm": 50,
-    "plants_spacing_in_cm": 40
+    "plants_spacing_in_cm": 40,
+    "sowing_date_start_inside": "15 janvier",
+    "sowing_date_end_inside": "31 mars",
+    "sowing_date_start_outside": null,
+    "sowing_date_end_outside": null,
+    "plant_friends": "estragon, haricot, persil, pois, thym, oeillets d'inde",
+    "plant_ennemies": "oignons, poivrons, pommes de terre"
   },
   {
     "plant_id": 2,
@@ -31,7 +37,13 @@
     "crop": "Coupez les gourmands dès leur apparition, ils ralentissent la formation des fleurs. 4 à 5 semaines après la plantation, arrosez avec une solution diluée au purin d'orties pour fortifier les pieds. 6 à 8 semaines après la plantation, pulvérisez une solution à base de bouillie bordelaise en préventif contre le mildiou. Cette solution peu être diluée 2 fois plus que lors d'une utilisation curative.",
     "crop_rotation": "Attendez 3 ans avant de replanter des tomates au même endroit.",
     "rows_spacing_in_cm": 60,
-    "plants_spacing_in_cm": 60
+    "plants_spacing_in_cm": 60,
+    "sowing_date_start_inside": null,
+    "sowing_date_end_inside": null,
+    "sowing_date_start_outside": "15 février",
+    "sowing_date_end_outside": "15 avril",
+    "plant_friends": "basilic, oeillets d'inde, concombre",
+    "plant_ennemies": "pommes de terre"
   },
   {
     "plant_id": 3,
@@ -48,7 +60,13 @@
     "crop": "Les gousses se récoltent jeunes : entre 60 et 80 jours après le semis. Les haricots en grains frais se récoltent entre 90 et 110 jours après sowing. Les haricots en grains secs, à conserver, se récoltent à pleine maturité : entre 120 et 140 jours après semis.",
     "crop_rotation": null,
     "rows_spacing_in_cm": 70,
-    "plants_spacing_in_cm": 50
+    "plants_spacing_in_cm": 50,
+    "sowing_date_start_inside": null,
+    "sowing_date_end_inside": null,
+    "sowing_date_start_outside": "15 avril",
+    "sowing_date_end_outside": "30 juin",
+    "plant_friends": "maïs, pommes de terre",
+    "plant_ennemies": null
   },
   {
     "plant_id": 4,
@@ -65,7 +83,13 @@
     "crop": null,
     "crop_rotation": "Attendre 2 ou 3 ans avant de faire revenir les courgettes au même emplacement.",
     "rows_spacing_in_cm": 100,
-    "plants_spacing_in_cm": 80
+    "plants_spacing_in_cm": 80,
+    "sowing_date_start_inside": "1er mars",
+    "sowing_date_end_inside": "15 mai",
+    "sowing_date_start_outside": "15 avril",
+    "sowing_date_end_outside": "15 mai",
+    "plant_friends": "œillets d'inde, marguerites, tournesols, maïs, haricots",
+    "plant_ennemies": "pommes de terre"
   },
   {
     "plant_id": 5,
@@ -82,6 +106,12 @@
     "crop": "Récoltez les radis 6 semaines après le semis.",
     "crop_rotation": null,
     "rows_spacing_in_cm": 15,
-    "plants_spacing_in_cm": 5
+    "plants_spacing_in_cm": 5,
+    "sowing_date_start_inside": null,
+    "sowing_date_end_inside": null,
+    "sowing_date_start_outside": "1er mars",
+    "sowing_date_end_outside": "30 septembre",
+    "plant_friends": "haricots, pois, capucines, choux, laitues, cresson, épinards, carottes, tomates",
+    "plant_ennemies": "concombres, pastèques"
   }
 ]
