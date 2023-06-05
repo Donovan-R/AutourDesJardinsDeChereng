@@ -295,8 +295,7 @@ nav {
   border-color: transparent;
   transition: var(--transition);
   cursor: pointer;
-  transition: rotate 1s, color 2s ;
-
+  transition: rotate 1s, color 2s;
 }
 .nav-toggle:hover {
   color: var(--clr-green-dark);
@@ -613,7 +612,6 @@ single plant       |
   display: grid;
   place-items: center;
   text-align: center;
-  
 }
 
 .singlePlantSection h2 {
@@ -626,7 +624,6 @@ single plant       |
 
 .singlePlantSection h3 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  
 }
 
 .singlePlantSection h4 {
@@ -638,7 +635,6 @@ single plant       |
 @media screen and (min-width: 350px) {
   .singlePlantSection {
     padding: 0rem 2rem 0 2rem;
-   
   }
 }
 
@@ -665,10 +661,8 @@ single plant       |
     height: 9rem;
     width: 8rem;
     border: solid 2px var(--clr-green-middle);
-    
   }
 }
-
 
 .underline {
   height: 8px;
@@ -679,7 +673,7 @@ single plant       |
 
 @media screen and (min-width: 900px) {
   .singlePlantSection {
-    align-items:start;
+    align-items: start;
     padding-top: 1rem;
     grid-template-columns: 1fr 0.5fr 2fr;
   }
@@ -708,14 +702,12 @@ single plant       |
   display: inline-block;
   margin-bottom: 1rem;
   border: solid 2px var(--clr-green-dark);
-  margin-left: 1rem;
 }
 
-.spacingDetails td, th {
+.spacingDetails td,
+th {
   padding: 0.2rem;
 }
-
-
 
 .spacingDetails tbody tr:nth-child(odd) {
   background-color: #33ff55;
