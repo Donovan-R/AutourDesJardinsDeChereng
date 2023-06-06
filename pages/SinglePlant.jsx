@@ -46,7 +46,7 @@ const SinglePlant = () => {
         crop: plant[0].crop,
         crop_rotation: plant[0].crop_rotation,
         rows_spacing_in_cm: plant[0].rows_spacing_in_cm,
-        plants_spacing_in_cm: plant[0].rows_spacing_in_cm,
+        plants_spacing_in_cm: plant[0].plants_spacing_in_cm,
         sowing_date_start_inside: plant[0].sowing_date_start_inside,
         sowing_date_end_inside: plant[0].sowing_date_end_inside,
         sowing_date_start_outside: plant[0].sowing_date_start_outside,

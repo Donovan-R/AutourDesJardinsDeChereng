@@ -28,7 +28,13 @@ const Plantations = () => {
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
-
+  newTab.sort(function (a, b){
+    if (a.name < b.name){
+      return -1
+    } else {
+      return 1
+    }
+  });
   const filterPlantTab = newTab.filter((plant) =>
     plant.name.toLowerCase().includes(search.toLowerCase())
   );
