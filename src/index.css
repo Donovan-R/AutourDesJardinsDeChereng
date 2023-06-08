@@ -258,12 +258,12 @@ retour haut de page et accueil et liens |
 }
 
 .linkPage {
-  color: #33ff55;
+  color: #04420d;
   text-transform: capitalize;
   font-style: italic;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
-  text-shadow: 2px 0px 2px rgba(8, 67, 18, 0.6);
+  text-shadow: 2px 0px 2px rgba(8, 172, 35, 0.6);
 }
 
 /*
@@ -761,7 +761,6 @@ alert        |
 .alert-success {
   color: var(--clr-green-light);
 }
-
 
 /*
 =============== 
