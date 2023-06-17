@@ -278,7 +278,7 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
-  margin: auto;
+  /* margin: auto; */
   width: 100%;
   z-index: 999;
 }
@@ -306,6 +306,15 @@ nav {
   border: solid 3px var(--clr-green-dark);
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.links a {
+  padding: 0.5rem;
+}
+
 @media screen and (min-width: 350px) {
   .logo {
     height: 100%;
@@ -317,7 +326,7 @@ nav {
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   transition: var(--transition);
 }
 .links a:hover {
@@ -339,10 +348,9 @@ nav {
 @media screen and (min-width: 970px) {
   .nav-center {
     max-width: 1170px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: flex;
     align-items: center;
-
     justify-content: space-between;
     padding: 1rem;
   }
@@ -494,7 +502,7 @@ plants              |
 */
 .plantsSection {
   min-height: calc(var(--vh, 1vh) * 100 - 148px);
-  background: linear-gradient(90deg, #153307 0%, #0bdc0b 40%, #244224 80%);
+  background: linear-gradient(90deg, #153307 0%, #17ab17 40%, #244224 80%);
 }
 
 @media screen and (min-width: 600px) {

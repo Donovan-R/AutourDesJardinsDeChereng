@@ -7,18 +7,18 @@ export const linksPublic = [
   {
     id: 2,
     url: '/about',
-    text: 'À propos',
+    text: ' À propos',
   },
   {
     id: 3,
     url: '/plantations',
-    text: 'Plantations',
+    text: ' Plantations',
   },
 
   {
     id: 4,
     url: '/contact',
-    text: 'Nous contacter',
+    text: ' Nous contacter',
   },
 ];
 export const linksPrivate = [
