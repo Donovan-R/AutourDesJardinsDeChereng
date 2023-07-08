@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 
-
 const PlantsList = ({ plant }) => {
   const {
     plant_id,
@@ -22,14 +21,12 @@ const PlantsList = ({ plant }) => {
           {plantation_date_end}
         </h4>
         <h4>
-          <b>Récolte</b> à partir du : {harvest_date_start}
+          <b>Récolte</b> à partir du :<br /> {harvest_date_start}
         </h4>
         <div className='detailsBtnContainer'>
-       <Link to={`/plantations/${plant_id}`}>
-          <button className='detailsBtn'>
-            détails
-          </button>
-      </Link>
+          <Link to={`/plantations/${plant_id}`}>
+            <button className='detailsBtn'>détails</button>
+          </Link>
         </div>
       </div>
     </article>
